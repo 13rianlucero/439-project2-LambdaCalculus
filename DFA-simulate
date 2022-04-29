@@ -44,7 +44,7 @@
 
 ;dfa representation of 6.3 from the textbook
 (define xor-dfa
-  '(q0						                  ;start state	       
+  '(q0						                                                ;start state	       
      (((q0 0) q0) ((q0 1) q1) ((q1 0) q1) ((q1 1) q0))            ;transition state
    (q1)))                                                         ;success state
 
@@ -55,15 +55,28 @@
       ((q2 0) q3) ((q2 1) q1) ((q3 0) q3) ((q3 1) q3))
    (q0)))                                                         ;success state
 
-
 ;tests for 6.3 dfa
 (display(execute xor-dfa '(0 0 1)))(newline)
 (display(execute xor-dfa '(0 1 0)))(newline)
 (display(execute xor-dfa '(0 1 1)))(newline)
-
 
 ;tests for 6.4 dfa
 (display(execute figure6-4_dfa '( 0 1 0)))(newline)
 (display(execute figure6-4_dfa '( 0 1 0 0 1 0)))(newline)
 (display(execute figure6-4_dfa '( 1 0 1)))(newline)
 
+;Tests for 6.3 dfa (execute in racket terminal, line by line)
+  ;Test Case: 1 | Expected Output: 1 | Accepted
+    ;(execute xor-dfa '(0 0 1))
+  ;Test Case: 2 | Expected Output: 1 | Accepted
+    ;(execute xor-dfa '(0 1 0)
+  ;Test Case: 3 | Expected Output: 0 | Rejected
+    ;(execute xor-dfa '(0 1 1)
+
+;tests for 6.4 dfa (execute in racket terminal, line by line)
+  ;Test Case: 1 | Expected Output: 1 | Accepted
+    ;(execute figure6-4_dfa '( 0 1 0)
+  ;Test Case: 2 | Expected Output: 1 | Accepted
+    ;(execute figure6-4_dfa '( 0 1 0 0 1 0)
+  ;Test Case: 3 | Expected Output: 0 | Rejected
+    ;(execute figure6-4_dfa '( 1 0 1)
