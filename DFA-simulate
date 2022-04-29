@@ -1,3 +1,8 @@
+; CPSC-439 Theory of Computation
+; Project #1: Turing Machines & DFA’s
+; Brian Lucero | David Cortez | Ricardo Barojas 
+; April 29, 2022
+
 #!r6rs
 (import (rnrs lists (6))
         (rnrs base (6))
